@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+    - main
+    
+jobs:
+  deploy_job:
+    name: deploy
+    runs-on: ubuntu-22.04
+    steps:
+      - name: ssh到服务器执行git pull
+        run: sshpass -p ${{secrets.REMOTE_PWD}} ssh -o StrictHostKeyChecking=no root@${{secrets.REMOTE_IP}} "cd /root/web/lex-blog && chmod +x build.sh && ./build.sh"
