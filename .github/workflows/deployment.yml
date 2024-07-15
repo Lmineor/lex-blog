@@ -21,4 +21,4 @@ jobs:
         run: npm run build
 
       - name: Deploy to Server
-        run: sshpass -p ${{secrets.REMOTE_PWD}} ssh -o StrictHostKeyChecking=no root@${{secrets.REMOTE_IP}}  "rsync -avz --delete ./build/ /www/wwwroot/blog.mineor.xyz/"
+        run: sshpass -p ${{secrets.REMOTE_PWD}} ssh -o StrictHostKeyChecking=no root@${{secrets.REMOTE_IP}}  "rsync -avz --delete build/ /www/wwwroot/blog.mineor.xyz/"
