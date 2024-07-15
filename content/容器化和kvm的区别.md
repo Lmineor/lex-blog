@@ -1,5 +1,5 @@
 ---
-title: "容器化和kvm的区别"
+title: "容器化和kvm的区别1"
 date: 2024-06-18
 draft: false
 tags: # 文章所属标签
