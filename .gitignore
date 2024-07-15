@@ -132,3 +132,4 @@ dist
 
 public/json
 index.json
+package-lock.json
