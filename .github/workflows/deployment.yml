@@ -29,6 +29,6 @@ jobs:
           username: root
           password: ${{secrets.REMOTE_PWD}}
           port: 22
-          source: "build/"
+          source: "build/*"
           target: "/www/wwwroot/blog.mineor.xyz/"
           debug: true
