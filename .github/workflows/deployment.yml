@@ -31,3 +31,4 @@ jobs:
           port: 22
           source: "build/"
           target: "/www/wwwroot/blog.mineor.xyz/"
+          debug: true
