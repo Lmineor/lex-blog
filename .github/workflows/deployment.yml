@@ -20,8 +20,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      # - name: Deploy to Server
-      #   run: sshpass -p ${{secrets.REMOTE_PWD}} ssh -o StrictHostKeyChecking=no root@${{secrets.REMOTE_IP}}  "rsync -avz --delete /root/build/ /www/wwwroot/blog.mineor.xyz/"
       - name: Copy Files 2 Server
         uses: appleboy/scp-action@master
         with:
