@@ -1,33 +1,33 @@
-name: Auto Deploy
+# name: Auto Deploy
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
 
-      # 安装依赖（如果你的项目需要）
-      - name: Install dependencies
-        run: npm install
+#       # 安装依赖（如果你的项目需要）
+#       - name: Install dependencies
+#         run: npm install
 
-      # 构建项目
-      - name: Build
-        run: npm run build
+#       # 构建项目
+#       - name: Build
+#         run: npm run build
 
-      - name: Copy Files 2 Server
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{secrets.REMOTE_IP}}
-          username: root
-          password: ${{secrets.REMOTE_PWD}}
-          port: 22
-          source: build/*
-          target: /www/wwwroot/blog.mineor.xyz/
-          overwrite: true
-          debug: true
+#       - name: Copy Files 2 Server
+#         uses: appleboy/scp-action@master
+#         with:
+#           host: ${{secrets.REMOTE_IP}}
+#           username: root
+#           password: ${{secrets.REMOTE_PWD}}
+#           port: 22
+#           source: build/*
+#           target: /www/wwwroot/blog.mineor.xyz/
+#           overwrite: true
+#           debug: true
