@@ -27,6 +27,6 @@ jobs:
           username: root
           password: ${{secrets.REMOTE_PWD}}
           port: 22
-          source: "build/index.html"
-          target: "/www/wwwroot/blog.mineor.xyz/"
+          source: build/index.html
+          target: /www/wwwroot/blog.mineor.xyz/
           overwrite: true
