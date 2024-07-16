@@ -27,7 +27,7 @@ jobs:
           username: root
           password: ${{secrets.REMOTE_PWD}}
           port: 22
-          source: build/**/*
+          source: build/*
           target: /root/test
           overwrite: true
           debug: true
