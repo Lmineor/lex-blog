@@ -28,6 +28,6 @@ jobs:
           password: ${{secrets.REMOTE_PWD}}
           port: 22
           source: build/**/*
-          target: /www/wwwroot/blog.mineor.xyz/
+          target: /root/test
           overwrite: true
           debug: true
