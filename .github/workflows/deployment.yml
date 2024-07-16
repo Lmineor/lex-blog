@@ -30,3 +30,4 @@ jobs:
           source: build/index.html
           target: /www/wwwroot/blog.mineor.xyz/
           overwrite: true
+          debug: true
